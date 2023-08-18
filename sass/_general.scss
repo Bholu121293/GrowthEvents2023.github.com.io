@@ -1,0 +1,105 @@
+body {
+  @include fonts(400, 18px, 26px, $gro-font);
+  margin: 0;
+  padding: 0;
+  color: $white;
+  background-color: $black;
+  transform: none;
+  * {
+    box-shadow: none;
+    outline: none;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      color: currentColor;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    color: $white;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1 {
+  @include fonts(
+    900,
+    clamp(rem(24,24), -2.9447rem + 9.2597vw, rem(64,64)),
+    clamp(rem(32,32), -3.3336rem + 11.1116vw, rem(80,80)),
+    $gro-font
+  );
+}
+h2 {
+  @include fonts(800, rem(48,48), rem(60,60), $gro-font);
+}
+h3 {
+  @include fonts(700, rem(40,40), rem(52,52), $gro-font);
+}
+h4 {
+  @include fonts(600, rem(32,32), rem(44,44), $gro-font);
+}
+h5 {
+  @include fonts(600, rem(26,26), rem(36,36), $gro-font);
+}
+h6 {
+  @include fonts(600, rem(22,22), rem(32,32), $gro-font);
+}
+//selections
+::-moz-selection {
+  background: rgba($primary, 0.15);
+}
+::selection {
+  background: rgba($primary, 0.15);
+}
+//scrollbar
+::-webkit-scrollbar {
+  width: rem(10,10);
+  height: rem(10,10);
+}
+::-webkit-scrollbar-track {
+  background: rgba($primary, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background-color: $primary;
+}
+//end scrollbar
+
+.gro-main {
+  width: 100%;
+  height: auto;
+}
+.row {
+  row-gap: 25px;
+}
+.btn-primary {
+  @include flex(flex, row wrap, center, center);
+  border: none;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+  @include linear-background;
+  color: $white;
+  text-transform: uppercase;
+  padding: clamp(0.625rem, 0.4914rem + 0.3717vw, 0.9375rem) clamp(1.25rem, 0.9828rem + 0.7435vw, 1.875rem);
+}
+section {
+  padding-top: clamp(1.875rem, 0.2718rem + 4.461vw, 5.625rem);
+  padding-bottom: clamp(1.875rem, 0.2718rem + 4.461vw, 5.625rem);
+}

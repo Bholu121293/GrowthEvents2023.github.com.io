@@ -1,0 +1,15 @@
+.sectionTitle{
+	@include flex(flex,row wrap,center);
+	span{
+		@include fonts(600,clamp(2.5rem, -0.8261rem + 6.9384vw, 7.5rem),clamp(3.5rem, 0.2155rem + 6.8517vw, 8.4375rem),$gro-font);
+		color: transparent;
+		-webkit-text-stroke: 0.5px rgba($text,0.1);
+	}
+	.gro-title{
+		@include flex(flex,row wrap,center,center);
+		width: 100%;
+		@include fonts(700,clamp(2.125rem, 1.85rem + 1.375vw, 3.5rem),clamp(2.75rem, 2.425rem + 1.625vw, 4.375rem),$gro-font);
+		color: $white;
+		margin-top:-60px;
+	}
+}
