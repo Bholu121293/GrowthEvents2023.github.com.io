@@ -6,10 +6,11 @@
 		content: "";
 		position: absolute;
 		right: 0;
-		top: -80px;
+		top: clamp(-2.5rem, 0.1668rem + -4.3057vw, -5rem);
 		background: url("../../assets/media/speakers/playicon.png");
-		width: 100px;
-		height: 158px;
+		width: clamp(3.125rem, -0.2086rem + 5.3821vw, 6.25rem);
+		height: clamp(4.9375rem, -0.3295rem + 8.5038vw, 9.875rem);
+		background-size: contain;
 	}
 	&-card{
 		background-color: #171515;
@@ -60,4 +61,7 @@
 			}
 		}
 	}
+}
+@media only screen and (max-width:991px){
+
 }

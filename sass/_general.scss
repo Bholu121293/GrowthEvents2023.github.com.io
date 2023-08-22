@@ -48,37 +48,37 @@ h1 {
   );
 }
 h2 {
-  @include fonts(800, rem(48,48), rem(60,60), $gro-font);
+  @include fonts(800, rfs-value(48px), rfs-value(60px), $gro-font);
 }
 h3 {
-  @include fonts(700, rem(40,40), rem(52,52), $gro-font);
+  @include fonts(700, rfs-value(40px), rfs-value(52px), $gro-font);
 }
 h4 {
-  @include fonts(600, rem(32,32), rem(44,44), $gro-font);
+  @include fonts(600, rfs-value(32px), rfs-value(44px), $gro-font);
 }
 h5 {
-  @include fonts(600, rem(26,26), rem(36,36), $gro-font);
+  @include fonts(600, rfs-value(26px), rfs-value(36px), $gro-font);
 }
 h6 {
-  @include fonts(600, rem(22,22), rem(32,32), $gro-font);
+  @include fonts(600, rfs-value(22px), rfs-value(32px), $gro-font);
 }
 //selections
 ::-moz-selection {
-  background: rgba($primary, 0.15);
+  background: rgba($tertiary, 0.1);
 }
 ::selection {
-  background: rgba($primary, 0.15);
+  background: rgba($tertiary, 0.1);
 }
 //scrollbar
 ::-webkit-scrollbar {
-  width: rem(10,10);
-  height: rem(10,10);
+  width:5px;
+  height: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba($primary, 0.2);
+  background: rgba($tertiary, 0.2);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: $primary;
+  background-color: $tertiary;
 }
 //end scrollbar
 

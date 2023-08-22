@@ -1,7 +1,7 @@
 .gro-banner{
 	@include flex(flex,row wrap,null,center);
-	// height: calc(100vh - 100px);
-	height: calc(1080px - 100px);
+	height: calc(100vh - 100px);
+	// height: calc(1080px - 100px);
 	width: 100%;
 	padding: 0;
 	background-color: #252323;
@@ -28,11 +28,13 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 		animation: moveAnimation 5s infinite alternate;
+		z-index: 1;
 	}
 	&-content{
 		width: 100%;
 		padding-left: clamp(1.875rem, -1.025rem + 14.5vw, 16.375rem);
 		padding-right: clamp(1.875rem, 0.775rem + 5.5vw, 7.375rem);
+		z-index: 2;
 		&-box{
 			@include flex(flex,row wrap,null,center);
 			width: 100%;
@@ -132,5 +134,47 @@
 	}
 	50% {
 			transform: translateX(-100%);
+	}
+}
+@media only screen and (max-width:991px){
+	.gro-banner{
+		&-content{
+			width: 95%;
+			margin: 0 auto;
+			padding: 0;
+			.row{
+				flex-direction: column-reverse;
+				padding: 30px 0;
+			}
+			&-box{
+				.gro-banner-text{
+					justify-content: center;
+				}
+				.gro-banner-spantitle{
+					justify-content: center;
+				}
+				.gro-title{
+					text-align: center;
+				}
+				.gro-discription-text{
+					text-align: center;
+				}
+				.gro-timebox{
+					justify-content: center;
+				}
+				&-image{
+					img{
+						width: 50%;
+					}
+				}
+			}
+		}
+		.gro-element3{
+			width: 50px;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
 	}
 }

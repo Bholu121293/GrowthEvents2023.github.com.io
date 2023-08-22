@@ -19,3 +19,29 @@ footer{
 		}
 	}
 }
+@media only screen and (max-width:991px){
+	footer{
+		.gro-footer-logo{
+			@include flex(flex,row wrap,center,center);
+			width: 120px;
+			margin: 0 auto;
+			img{
+				width: 100%;
+				height: auto;
+			}
+
+		}
+		.gro-copyright{
+			@include flex(flex,row wrap,center,center);
+			font-size: 14px;
+			a{
+				color: $primary;
+				transition: all 0.3s ease;
+
+				&:hover{
+					color: $tertiary;
+				}
+			}
+		}
+	}
+}

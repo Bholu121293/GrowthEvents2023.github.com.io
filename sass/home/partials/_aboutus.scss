@@ -16,8 +16,8 @@
 		position: absolute;
 		background-image: url("../../assets/media/aboutus/element2.png");
 		background-repeat: no-repeat;
-		width: 304px;
-		height: 880px;
+		width: clamp(6.25rem, -8.0843rem + 23.1432vw, 19.6875rem);
+		height: clamp(18.125rem, -23.5445rem + 67.2766vw, 57.1875rem);
 		background-size: contain;
 		top: -40%;
 		right: 0;
@@ -34,10 +34,10 @@
 			&::before{
 				content: "welcome";
 				@include fonts(600,clamp(2.5rem, -0.8261rem + 6.9384vw, 7.5rem),clamp(3.5rem, 0.2155rem + 6.8517vw, 8.4375rem),$gro-font);
-				color: transparent; /* Make the text transparent */
-				-webkit-text-stroke: 0.5px rgba($text,0.1); /* Set the border width and color */
+				color: transparent;
+				-webkit-text-stroke: 0.5px rgba($text,0.2);
 				position: absolute;
-				top: -90px
+				top: clamp(-1.875rem, 2.1253rem + -6.4586vw, -5.625rem);
 			}
 			.gro-box-title{
 				@include flex(flex,row wrap,null,center);
@@ -112,6 +112,14 @@
 					}
 				}
 			}
+		}
+	}
+}
+
+@media only screen and (max-width:991px){
+	.gro-aboutus{
+		.row{
+			flex-direction: column-reverse;
 		}
 	}
 }
